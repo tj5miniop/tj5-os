@@ -1,4 +1,4 @@
-name: bluebuild
+name: Build images (AMD & NVIDIA) (bluebuild)
 on:
   schedule:
     - cron:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build Custom Image
+    name: Build images
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,6 +28,7 @@ jobs:
         recipe:
           # !! Add your recipes here
           - recipe.yml
+          - recipe-nvidia.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

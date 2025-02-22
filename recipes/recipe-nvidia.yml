@@ -3,10 +3,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: tj5-os
 # description will be included in the image's metadata
-description: my personal OS image,Based on Project Aurora from Universal Blue. NON-NVIDIA Image
+description: my personal OS image,Based on Project Aurora from Universal Blue. NVIDIA Image (Uses the open drivers)
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/tj5miniop/ublue-rolling-images-aurora
+base-image: ghcr.io/tj5miniop/ublue-rolling-images-aurora-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
