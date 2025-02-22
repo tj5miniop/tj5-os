@@ -37,7 +37,6 @@ modules:
       install:
         - io.gitlab.librewolf-community
         - org.gnome.Loupe
-        - 
       remove:
       #Remove some uneeded flatpaks
         - org.gnome.eog
