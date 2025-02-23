@@ -16,7 +16,16 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-    
+
+# Script snippets (NVIDIA & RPM FUSION FIXES)
+  - type: script
+    snippets:
+      - "rm -rf /etc/modprobe.d/nvidia-modeset.conf"
+      - "cp -r /usr/lib/modprobe.d/nvidia_cachyos.conf /etc/modprobe.d/nvidia-modeset.conf"
+      - "dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y"
+      - "dnf config-manager setopt fedora-cisco-openh264.enabled=1"
+ 
+ 
   #Add Some Bling  
   - type: bling
     install:
@@ -36,7 +45,6 @@ modules:
       - uksmd
       - cachyos-ananicy-rules
       - ananicy-cpp
-      - steam
       - gnome-disk-utility
     remove:
       - zram-generator-defaults
@@ -62,10 +70,6 @@ modules:
         - io.github.flattool.Warehouse
     user: {} # Also add Flathub user repo, but no user packages
     
-  - type: script
-    snippets:
-      - "rm -rf /etc/modprobe.d/nvidia-modeset.conf"
-      - "cp -r /usr/lib/modprobe.d/nvidia_cachyos.conf /etc/modprobe.d/nvidia-modeset.conf"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
