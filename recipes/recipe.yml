@@ -43,6 +43,7 @@ modules:
       - cachyos-ananicy-rules
       - ananicy-cpp
       - gnome-disk-utility
+      - papirus-icon-theme
     remove:
       - zram-generator-defaults
       - kde-partitionmanager 

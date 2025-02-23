@@ -17,12 +17,6 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-# Script snippets (NVIDIA & RPM FUSION FIXES)
-  - type: script
-    snippets:
-      - "rm -rf /etc/modprobe.d/nvidia-modeset.conf"
-      - "cp -r /usr/lib/modprobe.d/nvidia_cachyos.conf /etc/modprobe.d/nvidia-modeset.conf"
- 
   #Add Some Bling  
   - type: bling
     install:
