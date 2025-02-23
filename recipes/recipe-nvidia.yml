@@ -38,7 +38,6 @@ modules:
       - cachyos-ananicy-rules
       - ananicy-cpp
       - gnome-disk-utility
-      - papirus-icon-theme
     remove:
       - zram-generator-defaults
       - kde-partitionmanager 
@@ -64,7 +63,10 @@ modules:
         - org.kde.kclock
         - io.github.flattool.Warehouse
     user: {} # Also add Flathub user repo, but no user packages
-    
+
+  - type: script
+    scripts:
+      - setup.sh 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
