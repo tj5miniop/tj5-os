@@ -42,7 +42,6 @@ modules:
     remove:
       - zram-generator-defaults
       - kde-partitionmanager 
-      - kate
       - skanpage
       - kwrite
 
