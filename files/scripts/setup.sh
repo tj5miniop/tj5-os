@@ -19,3 +19,7 @@ dnf5 -y update --refresh
 
  #Install Steam Package
 dnf5 -y install steam --allowerasing
+
+#Install Librewolf browser
+curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+dnf5 -y install librewolf
