@@ -37,9 +37,11 @@ modules:
       - uksmd
       - cachyos-ananicy-rules
       - ananicy-cpp
-      -  kde-partitionmanager 
+      - steam
+      - gnome-disk-utility
     remove:
       - zram-generator-defaults
+      -  kde-partitionmanager 
     
 
   - type: default-flatpaks
