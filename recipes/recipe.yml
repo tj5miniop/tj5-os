@@ -45,7 +45,10 @@ modules:
       - gnome-disk-utility
     remove:
       - zram-generator-defaults
-      -  kde-partitionmanager 
+      - kde-partitionmanager 
+      - kate
+      - skanpage
+      - kwrite
     
 
   - type: default-flatpaks
