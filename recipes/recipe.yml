@@ -47,6 +47,8 @@ modules:
       - cachyos-ananicy-rules
       - ananicy-cpp
       - gnome-disk-utility
+      - mangohud
+      - gamescope
     remove:
       - zram-generator-defaults
       - kde-partitionmanager 
