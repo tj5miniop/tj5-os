@@ -21,7 +21,6 @@ modules:
   - type: bling
     install:
         - rpmfusion
-        - ublue-update
         - dconf-update-service
 
   - type: rpm-ostree
@@ -38,6 +37,7 @@ modules:
       - latencyflex-vulkan-layer
       - uksmd
       - obs-studio
+      - heroic-games-launcher-bin
       - cachyos-ananicy-rules
       - ananicy-cpp
       - gnome-disk-utility
