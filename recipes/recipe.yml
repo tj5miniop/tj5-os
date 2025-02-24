@@ -63,6 +63,7 @@ modules:
         - com.spotify.Client
         - com.usebottles.bottles
         - com.github.tchx84.Flatseal
+        - io.gitlab.librewolf-community
       remove:
       #Remove some uneeded flatpaks
         - org.kde.haruna
